@@ -8,7 +8,7 @@
 
 实物图:
     <br>
-    <img src="../../documents/_static/example/oled_screen_module/screen demo.jpg" width = "500" alt="screen demo" align=center />
+    <img src="screen demo.jpg" width = "500" alt="screen demo" align=center />
 
 -------
 
@@ -19,13 +19,13 @@
 - 温度、湿度传感器 (HTS221)
 - 两个 TouchPad 按钮
 
-完整硬件原理图:[ESP32_BUTTON_MODULE_V2.pdf](../../documents/_static/example/oled_screen_module/ESP32_BUTTON_MODULE_V2_20170720A.pdf)
+完整硬件原理图:[ESP32_BUTTON_MODULE_V2.pdf](ESP32_BUTTON_MODULE_V2_20170720A.pdf)
 
 部分硬件原理图介绍：
 
 显示屏、传感器电源开关控制原理图:
     <br>
-    <img src="../../documents/_static/example/oled_screen_module/peripher switch.png" width = "500" alt="apds9960" align=center />
+    <img src="peripher switch.png" width = "500" alt="apds9960" align=center />
 
 VDD33 为 DCDC (直流电源转换器) VOUT 3.3V 端, 做为 ESP32、外设、Flash 电源; VDD33_PeriP 为显示屏、温湿度传感器、手势传感器电源. 三极管 Si2301 用做电源开关, 控制 VDD33_PeriP 端电压, 默认情况下三极管 GATE 端保持高电平, 电源开关关闭; 通过控制 Power_ON 保持低电平以打开电源开关.
 
@@ -62,14 +62,14 @@ TouchPad 在工作时,会有两种状态: sleep、measure 循环交替进行,在
 
 - 低功耗模式下 LDO VOUT 3.3V 端 (包含 ESP32、显示屏、传感器) 的电流采样图如下:
     <br>
-    <img src="../../documents/_static/example/oled_screen_module/figure_3.3V.png" width = "500" alt="figure_3.3V" align=center />
+    <img src="figure_3.3V.png" width = "500" alt="figure_3.3V" align=center />
 
 > 注: 在低功耗模式下 LDO VOUT 3.3V 端的平均电流约为 30uA, 最大电流约为 1.6mA, 处在波峰时, TouchPad 位于 measure 状态.
 <br>
 
 - 低功耗模式下 LDO VIN 5V 端 (包含 ESP32、显示屏、传感器) 的电流采样图如下:
     <br>
-    <img src="../../documents/_static/example/oled_screen_module/figure_5V.png" width = "500" alt="figure_5V" align=center />
+    <img src="figure_5V.png" width = "500" alt="figure_5V" align=center />
 
 > 注: 在低功耗模式下 LDO VIN 5V 端的平均电流约为 45uA, 最大电流约为 2.1mA.
 
